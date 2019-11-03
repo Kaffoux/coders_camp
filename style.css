@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background-color: 136,7,100;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 50px; */
+    padding: 0;
+    
+}
+
+.flex-nav a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(162, 201, 56, 0.9);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.flex-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.flex-nav li {
+    flex: 1;
+}
+
+@media all and (max-width: 1000px) {
+    .flex-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .flex-nav li {
+        flex: 1 1 50%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .flex-nav li {
+        flex: 1 1 100%;
+    }
+    
+}
+
+header {
+    background-image: url(http://lorempixel.com/1200/500/);
+    height: 30vh;
+    text-transform: capitalize;
+    position: relative;
+}
+
+header div.h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: rgba(49,127,39);;
+    top: 15%;
+    font-size: 3rem;
+}
+
+header div.h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    top: 50%;
+    font-size: 1.5rem;
+}
+
+ul.socials {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -15%;
+    list-style: none;
+    display: flex;
+    width: 30%;
+    display: flex;
+    
+}
+ul.socials li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.socials img {
+    width: 25px;
+
+}
+
+/* ------------------------------ */
+section.help {
+    box-sizing: border-box;
+    margin: 10px 20px;
+}
+
+.help.text {
+    color: black;
+    background-color: rgba(95,80,107, 0.2);;
+    text-align: center;
+    padding: 10px;
+}
+
+div.buttons {
+    background-color:rgba(201,219,205, 0.8);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button.help {
+    background-color: rgba(49,127,39);;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+/* ----------------------------------------------------- */
+/* SECTION ABOUT ME */
+.aboutme {
+    box-sizing: border-box;
+    margin: 40px 20px 10px 20px;
+}
+
+.aboutme .title-section {
+    background-color: rgba(95,80,107, 0.2);
+    padding: 20px 20px 20px 60px;
+}
+
+
+.aboutme .flex-aboutme {
+    background-color: rgba(201,219,205, 0.8);
+    display: flex;
+}
+
+.aboutme .flex-aboutme .picture {
+    flex: 2;
+    margin: 10px 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme .flex-aboutme .picture img {
+    border-radius: 50%;
+}
+
+.aboutme .flex-aboutme .info {
+    flex: 3;
+    margin: 10px 15px;
+    padding: 20px;
+    line-height: 2rem;
+}
+
+.aboutme .flex-aboutme .info p {
+    font-weight: bolder;
+}
+
+.aboutme .flex-aboutme .info span {
+    color: rgba(49,127,39);
+}
+
+.aboutme .flex-aboutme .description {
+    flex: 4;
+    margin: 10px 15px;
+    margin-left: 0;
+    padding: 20px;
+    border-left-style: dotted;
+    border-left-color: rgba(49,127,39);
+    line-height: 1.75rem;
+    text-align: justify;
+}
+
+@media all and (max-width: 1000px) {
+    .aboutme .flex-aboutme {
+        flex-wrap:wrap;
+    }
+    .aboutme .flex-aboutme .picture {
+        flex: 1 1 25%;
+    }
+
+    .aboutme .flex-aboutme .info{
+        flex: 1 1 50%;
+    }
+
+    .aboutme .flex-aboutme .description {
+        flex: 1 1 100%;
+        border-left: none;
+        border-top-style: dotted;
+        border-top-color: rgba(49,127,39);;
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+}
+
+
+@media all and (max-width: 500px) {
+    .aboutme .flex-aboutme {
+        flex-wrap:wrap;
+    }
+    .aboutme .flex-aboutme .picture {
+        flex: 1 1 100%;
+    }
+
+    .aboutme .flex-aboutme .info{
+        flex: 1 1 100%;
+    }
+
+    .aboutme .flex-aboutme .description {
+        flex: 1 1 100%;
+        border-left: none;
+        border-top-style: dotted;
+        border-top-color: rgba(49,127,39);;
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+}
+
+
+/* ----------------------------------------------------- */
+/* SECTION SKILLS */
+.skills {
+    box-sizing: border-box;
+    margin: 40px 20px 10px 20px;
+}
+
+.skills .title-section {
+    background-color: rgba(95,80,107, 0.2);
+    padding: 20px 20px 20px 60px;
+}
+
+
+.skills .flex-skills {
+    background-color: rgba(201,219,205, 0.8);
+    display:flex;
+    justify-content: center;
+}
+
+.skills .flex-skills .skill {
+    padding: 20px;
+}
+
+.skills .flex-skills .skill2 {
+    border-left: 3px dotted rgba(49,127,39);;
+    border-right: 3px dotted rgba(49,127,39);;
+}
+
+.skills .flex-skills .skill .picture {
+    display: flex;
+    justify-content: center;
+}
+
+.skills .flex-skills .skill .picture img{
+    max-width: 100%;
+}
+
+.skills .flex-skills .skill .skill-name {
+    background-color: rgba(49,127,39);;
+    padding: 10px 5px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.skills .flex-skills .skill .name {
+    font-weight: bolder;
+}
+
+@media all and (max-width: 1000px) {
+    .skills .flex-skills {
+        flex-wrap: wrap;
+    }
+
+    .skills .flex-skills .skill1 {
+        flex: 1 1 50%;
+    }
+
+    .skills .flex-skills .skill2 {
+        flex: 1 1 50%;
+        border-right: none;
+    }
+
+    .skills .flex-skills .skill3 {
+        /* flex: 0.5 1 25%; */
+        width: 50%;
+        border-top: 3px dotted rgba(49,127,39);;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .skills .flex-skills {
+        flex-wrap: wrap;
+    }
+
+    .skills .flex-skills .skill {
+        flex: 1 1 100%;
+        border: none;
+    }
+
+    .skills .flex-skills  .skill2 {
+        border-top: 3px dotted rgba(49,127,39);
+        border-bottom: 3px dotted rgba(49,127,39);;
+    }
+}
+
+
+/* ----------------------------------------------------- */
+/* SECTION PORTFOLIO */
+.portfolio {
+    box-sizing: border-box;
+    margin: 40px 20px 10px 20px;
+}
+
+.portfolio .title-section {
+    background-color: rgba(95,80,107, 0.2);
+    padding: 20px 20px 20px 60px;
+}
+/* w pierwszej części selektora można dodać klasę .first lub .second w celu odwołania się do konkretnego projektu */
+
+.flex-project {
+    background-color:rgba(201,219,205, 0.8);
+    display: flex;
+}
+
+
+.flex-project .photo {
+    min-width: 200px;
+    min-height: 300px;
+}
+
+.flex-project .photo.main {
+    flex: 3;
+    background-image: url(images/pies.jpg);
+    background-size: cover;
+    padding: 30px 65px 30px 30px;
+}
+
+
+/* PIERWSZY PROJEKT */
+.flex-project.first .photo.main {
+    order: 1;
+}
+
+.flex-project.first .photo1 {
+    background-image: url(images/pies.jpg);
+    background-size: cover;
+    order: 2;
+    flex:1;
+}
+
+.flex-project.first .photo2 {
+    background-image: url(images/pies.jpg);
+    background-size: cover;
+    order: 2;
+    flex: 1;
+}
+/* ------ */
+
+/* DUGI  PROJEKT */
+.flex-project .photo.main {
+    order: 3;
+}
+
+.flex-project.second .photo1 {
+    background-image: url(images/pies.jpg);
+    background-size: cover;
+    order: 2;
+    flex:1;
+}
+
+.flex-project.second .photo2 {
+    background-image: url(images/pies.jpg);
+    background-size: cover;
+    order: 2;
+    flex:1 ;
+}
+/* ------ */
+
+
+.flex-project .photo img {
+    width: 100%;
+}
+
+.flex-project .photo.main .name-project {
+    color: white;
+}
+
+.flex-project .photo.main .desc-project {
+    padding: 10px 0;
+    color: white;
+}
+
+.flex-project .photo.main .view {
+    background-color: rgba(49,127,39);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1000px) {
+    .portfolio .flex-project {
+        flex-wrap: wrap;
+    }
+
+    .flex-project .photo.main {
+        flex: 2 1 100%;
+        order: 1;
+    }
+
+    .flex-project .photo {
+        flex: 1 1 50%;
+        order: 2;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .portfolio .flex-project {
+        flex-wrap: wrap;
+    }
+
+    .flex-project .photo {
+        flex: 1 1 100%;
+        order: 1;
+    }
+
+}
+
+/* ----------------------------------------------------- */
+/* SECTION CONTACT */
+.contact {
+    box-sizing: border-box;
+    margin: 40px 20px 10px 20px;
+    background-color: white;
+}
+.contact .title-section {
+    background-color: rgba(95,80,107, 0.2);
+    padding: 20px 20px 20px 60px;
+}
+.flex-contact {
+    display: flex;
+}
+
+
+
+.contact .left-side {
+    background-color: rgba(146,255,58, 0.9);
+    width: 40%;
+    padding: 20px;
+}
+
+.contact .left-side .picture {
+    display: flex;
+}
+
+
+.contact .left-side .picture img{
+    width: 30px;
+}
+
+.contact .left-side .description {
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+.contact .left-side .socials {
+    min-height: 20vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.contact .left-side .socials ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+.contact .left-side .socials li {
+    padding: 5px;
+}
+
+.contact .left-side .socials img {
+    width: 20px;
+}
+
+.contact .left-side .date {
+    font-size: 0.7rem;
+    padding: 5px;
+}
+
+.contact .right-side {
+    background-color: rgba(201,219,205, 0.8);
+    width: 60%;
+    padding: 20px;
+}
+
+.contact .right-side h1 {
+    color: black;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+
+
+.contact .right-side input,
+.contact .right-side textarea,
+.contact .right-side button {
+    background-color: white;
+    width: 100%;
+    padding: 7px;
+    margin: 10px 0;
+}
+
+@media all and (max-width: 500px) {
+
+.contact .left-side .socials ul {
+    flex-wrap: wrap;
+}
+
+.contact .left-side .socials ul li {
+    flex: 1 1 100%;
+}
+
+}
+/* ----------------------------------------------------- */
+/* SECTION FOOTER */
+.footer {
+    box-sizing: border-box;
+    margin: 40px 20px 10px 20px;
+}
+.footer p {
+    background-color: rgba(95,80,107, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
