@@ -3,9 +3,11 @@
     padding:0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: sans-serif;
     background-color: 136,7,100;
+    font-family: 'Saira', sans-serif;
+    font-weight: 400;
 }
 
 .wrapper {
@@ -16,9 +18,21 @@ body {
     
 }
 
+@keyframes from-left {
+    0% {left: -100%;}
+    100% {left: 0%;}
+}
+
+@keyframes from-right {
+    0% {right: -100%;}
+    100% {right: 0%;}
+}
+
+/* ----------------------------------------------------- */
+/* SECTION NAVIGATION */
 .flex-nav a {
     color: white;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 2px;
     text-decoration: none;
     background: rgba(162, 201, 56, 0.9);
@@ -26,6 +40,12 @@ body {
     display: inline-block;
     width: 100%;
     text-align: center;
+    transition: all 0.5s;
+}
+
+.flex-nav a:hover {
+    background: rgba(162, 201, 56, 0.7);
+    font-weight: 400;
 }
 
 .flex-nav ul {
@@ -56,9 +76,12 @@ body {
     
 }
 
+/* ----------------------------------------------------- */
+/* SECTION HEADER */
 header {
-    background-image: url(http://lorempixel.com/1200/500/);
-    height: 30vh;
+    background-image: url(images/baner);
+    height: 40vh;
+    background-size: cover;
     text-transform: capitalize;
     position: relative;
 }
@@ -68,8 +91,12 @@ header div.h1 {
     width: 100%;
     text-align: center;
     color: rgba(49,127,39);;
-    top: 15%;
-    font-size: 3rem;
+    top: 7%;
+    font-size: 2.5rem;
+    animation-name: from-left;
+    animation-duration: 3s;
+    -webkit-animation-name: from-left;
+    -webkit-animation-duration: 3s;
 }
 
 header div.h2 {
@@ -77,13 +104,17 @@ header div.h2 {
     width: 100%;
     text-align: center;
     color: white;
-    top: 50%;
+    top: 35%;
     font-size: 1.5rem;
+    animation-name: from-right;
+    animation-duration: 3s;
+    -webkit-animation-name: from-right;
+    -webkit-animation-duration: 3s;
 }
 
 ul.socials {
     position: absolute;
-    top: 70%;
+    bottom: 5%;
     left: 50%;
     margin-left: -15%;
     list-style: none;
@@ -100,10 +131,10 @@ ul.socials li {
 }
 ul.socials img {
     width: 25px;
-
 }
 
-/* ------------------------------ */
+/* ----------------------------------------------------- */
+/* SECTION HELP */
 section.help {
     box-sizing: border-box;
     margin: 10px 20px;
@@ -122,13 +153,18 @@ div.buttons {
     justify-content: space-evenly;
 }
 
+
+
 button.help {
     background-color: rgba(49,127,39);;
     margin: 10px 0;
     padding: 10px 20px;
     border-radius: 10px;
+    transition: all 0.4s;
 }
-
+div.buttons button.help:hover {
+    background-color: rgba(49,127,39,0.3);
+}
 
 /* ----------------------------------------------------- */
 /* SECTION ABOUT ME */
@@ -159,6 +195,10 @@ button.help {
 
 .aboutme .flex-aboutme .picture img {
     border-radius: 50%;
+    transition: all .5s ease-in-out;
+}
+.aboutme .flex-aboutme .picture img:hover {
+    transform: scale(1.3) rotate(360deg);
 }
 
 .aboutme .flex-aboutme .info {
@@ -169,7 +209,7 @@ button.help {
 }
 
 .aboutme .flex-aboutme .info p {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 .aboutme .flex-aboutme .info span {
@@ -277,7 +317,7 @@ button.help {
     line-height: 1.5rem;
 }
 .skills .flex-skills .skill .name {
-    font-weight: bolder;
+    font-weight: 700;
 }
 
 @media all and (max-width: 1000px) {
@@ -347,19 +387,38 @@ button.help {
     background-image: url(images/pies.jpg);
     background-size: cover;
     padding: 30px 65px 30px 30px;
+    transition: transform 0.4s ease-in-out;
+}
+.flex-project .photo.main:hover {
+    transform: scale(0.9);
+}
+.flex-project .photo1 {
+    transition: transform 0.3s ease-in;
+}
+
+.flex-project .photo1:hover {
+    transform: scale(0.9) rotate(-4deg);
+}
+.flex-project .photo2 {
+    transition: transform 0.3s ease-in;
+}
+
+.flex-project .photo2:hover {
+    transform: scale(0.9) rotate(4deg);
 }
 
 
 /* PIERWSZY PROJEKT */
 .flex-project.first .photo.main {
     order: 1;
+    
 }
 
 .flex-project.first .photo1 {
     background-image: url(images/pies.jpg);
     background-size: cover;
     order: 2;
-    flex:1;
+    flex: 1;
 }
 
 .flex-project.first .photo2 {
@@ -368,9 +427,10 @@ button.help {
     order: 2;
     flex: 1;
 }
+
 /* ------ */
 
-/* DUGI  PROJEKT */
+/* DRUGI  PROJEKT */
 .flex-project .photo.main {
     order: 3;
 }
@@ -409,6 +469,11 @@ button.help {
     color: white;
     padding: 10px 15px;
     border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.flex-project .photo.main .view:hover {
+    background-color: rgba(49,127,39, 0.6);
 }
 
 @media all and (max-width: 1000px) {
@@ -457,7 +522,7 @@ button.help {
 
 
 .contact .left-side {
-    background-color: rgba(146,255,58, 0.9);
+    background-image: linear-gradient(rgba(146,255,58, 0.9), green, rgba(201,219,205, 0.8));
     width: 40%;
     padding: 20px;
 }
@@ -469,6 +534,7 @@ button.help {
 
 .contact .left-side .picture img{
     width: 30px;
+    margin-bottom: 20px;
 }
 
 .contact .left-side .description {
