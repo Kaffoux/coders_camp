@@ -8,6 +8,7 @@ body {
     background-color: 136,7,100;
     font-family: 'Saira', sans-serif;
     font-weight: 400;
+    color: #333;
 }
 
 .wrapper {
@@ -27,6 +28,16 @@ body {
     0% {right: -100%;}
     100% {right: 0%;}
 }
+
+@keyframes change-color {
+    0% {background-color: hsla(0, 91%, 36%, 1); color: #ffffff;}
+    25% {background-color: rgba(67, 175, 8, 1);}
+    50% {background-color: #089faf;}
+    75% {background-color: hsla(249, 91%, 36%, 1); color: #ffffff;}
+    100% {background-color:hsla(329, 91%, 36%, 1);}
+}
+
+
 
 /* ----------------------------------------------------- */
 /* SECTION NAVIGATION */
@@ -315,6 +326,13 @@ div.buttons button.help:hover {
     padding: 10px 5px;
     text-align: center;
     line-height: 1.5rem;
+    animation-name: change-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: change-color;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    
 }
 .skills .flex-skills .skill .name {
     font-weight: 700;
